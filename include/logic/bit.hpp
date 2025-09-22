@@ -1,30 +1,30 @@
 #pragma once
-#include <stdexcept>  // std::invalid_argument
+#include <stdexcept> 
 
 namespace logic {
 
 class Bit {
 private:
-    int value;
+    int value_;
 
 public:
-    Bit(int v) {
-        set(v);
+    Bit(int value) {
+        set(value);
     }
 
-    void set(int v) {
-        if (v != 0 && v != 1) {
+    void set(int value) {
+        if (value != 0 && value != 1) {
             throw std::invalid_argument("It's a bit: just 1 or 0.");
         }
-        value = v;
+        value_ = value;
     }
 
     int get() const {
-        return value;
+        return value_;
     }
 
     operator int() const {
-        return value;
+        return value_;
     }
 };
 

@@ -1,2 +1,3 @@
 # Logic
-more soon
+- [ ] replicate de circuit logic with the code
+
